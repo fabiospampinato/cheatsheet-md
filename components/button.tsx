@@ -7,7 +7,7 @@ import Link from 'next/link';
 /* BUTTON */
 
 const Button = ({ className, target, title }: { className?: string, target: string, title: string }) => (
-  <Link href={`/${target}`}>
+  <Link href={`/${target}.pdf`}>
     <a className={`button ${target} ${className || ''}`}>
       <img src={`/static/images/logos/${target}.png`} alt={`${title}'s logo`} />
       <label>{title}</label>
