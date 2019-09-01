@@ -1,0 +1,56 @@
+{
+  "private": true,
+  "name": "cheatsheet-md",
+  "description": "Markdown cheatsheets for popular flavors like CommonMark, GitHub Flavored Markdown, Hacker News and Notable.",
+  "version": "1.0.0",
+  "scripts": {
+    "clean": "del .next out",
+    "build": "npm run clean && next build",
+    "export": "next export",
+    "postexport": "cp -r .github/. out",
+    "start": "next start -p 7070",
+    "deploy": "npm run build && npm run export && git-directory-deploy --directory out",
+    "prod": "npm run build && npm run start",
+    "dev": "next -p 7070"
+  },
+  "bugs": {
+    "url": "https://github.com/cheatsheet-md/website/issues"
+  },
+  "license": "UNLICENSED",
+  "author": {
+    "name": "Fabio Spampinato",
+    "email": "spampinabio@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cheatsheet-md/website.git"
+  },
+  "keywords": [
+    "website",
+    "cheatsheet",
+    "markdown",
+    "commonmark",
+    "hacker-news",
+    "hn",
+    "github-flavored-markdown",
+    "gfm",
+    "notable"
+  ],
+  "dependencies": {
+    "next": "^9.0.5",
+    "next-seo": "^2.0.0",
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0"
+  },
+  "devDependencies": {
+    "@types/node": "^12.7.3",
+    "@types/react": "^16.9.2",
+    "@types/react-dom": "^16.9.0",
+    "@zeit/next-sass": "^1.0.1",
+    "del-cli": "^2.0.0",
+    "git-directory-deploy": "^1.5.1",
+    "node-sass": "^4.12.0",
+    "tsconfig-paths-webpack-plugin": "^3.2.0",
+    "typescript": "^3.6.2"
+  }
+}
