@@ -8,8 +8,8 @@ import * as React from 'react';
 const Hero = () => (
   <div className="hero">
     <img src="/static/images/icon.png" title="Cheatsheet.md's logo" />
-    <p className="title">Cheatsheet.md</p>
-    <p className="description">Markdown cheatsheets collection.</p>
+    <h1 className="title">Cheatsheet.md</h1>
+    <h2 className="description">Markdown cheatsheets collection.</h2>
   </div>
 );
 

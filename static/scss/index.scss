@@ -9,7 +9,6 @@ html,
 #__next {
   margin: 0;
   width: 100vw;
-  height: 100vh;
   font-family: $font-family;
   background-color: $background-color;
 }
@@ -36,7 +35,7 @@ html,
 
 $button-background: #f9f9f9;
 $button-foreground: hsl(0, 0%, 12%);
-$button-border: #dbdbdb;
+$button-border: #d9d9d9;
 
 .button {
 
@@ -73,6 +72,21 @@ $button-border: #dbdbdb;
     cursor: pointer;
   }
 
+  &.disabled {
+
+    border-style: dashed;
+    pointer-events: none;
+
+    img {
+      filter: grayscale(100%);
+    }
+
+    > * {
+      opacity: .75;
+    }
+
+  }
+
 }
 
 $buttons-max-width: 300px;
@@ -90,13 +104,11 @@ $buttons-max-width: 300px;
 
 }
 
-$hero-height: 225px;
 $hero-background: #0D1E24;
 $hero-foreground: $background-color;
 
 .hero {
 
-  height: $hero-height;
   background-color: $hero-background;
   color: $hero-foreground;
   margin-bottom: $gutter;
@@ -104,27 +116,69 @@ $hero-foreground: $background-color;
   margin-left: - $gutter;
   margin-right: - $gutter;
   display: grid;
-  grid-template-areas: "logo title" "logo description";
   grid-gap: 7px;
 
   img {
     width: 84px;
     height: 84px;
-    margin: auto 7px auto auto;
     grid-area: logo;
   }
 
   .title {
     font-size: 2.5em;
     font-weight: 600;
-    margin: auto auto 0 0;
     grid-area: title;
+    text-align: center;
   }
 
   .description {
     font-size: 1.25em;
-    margin: 0 auto auto 0;
+    font-weight: normal;
     grid-area: description;
+    text-align: center;
+  }
+
+}
+
+.hero {
+
+  height: 225px;
+  grid-template-areas: "logo title" "logo description";
+
+  img {
+    margin: auto 7px auto auto;
+  }
+
+  .title {
+    margin: auto auto 0 0;
+  }
+
+  .description {
+    margin: 0 auto auto 0;
+  }
+
+}
+
+@media screen and ( max-width: 430px ) {
+
+  .hero {
+
+    height: 300px;
+    grid-template-areas: "logo" "title" "description";
+    grid-template-rows: 1.75fr 0fr 1fr;
+
+    img {
+      margin: auto auto 7px auto;
+    }
+
+    .title {
+      margin: 0 auto 0 auto;
+    }
+
+    .description {
+      margin: 0 auto auto auto;
+    }
+
   }
 
 }

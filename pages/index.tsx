@@ -14,10 +14,10 @@ const Index = () => (
     <Hero />
     <Wave />
     <div className="buttons">
-      <Button target="commonmark" title="CommonMark" />
-      <Button target="github" title="Github" />
-      <Button target="hackernews" title="Hacker News" />
-      <Button target="reddit" title="Reddit" />
+      <Button className="disabled" target="commonmark" title="CommonMark" />
+      <Button className="disabled" target="github" title="Github" />
+      <Button className="disabled" target="hackernews" title="Hacker News" />
+      <Button className="disabled" target="reddit" title="Reddit" />
       <Button target="notable" title="Notable" />
     </div>
   </Layout>
