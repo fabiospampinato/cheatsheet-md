@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[11],{"0GF3":function(n,t,e){"use strict";e.r(t);var i=e("q1tI"),u=e("aiUF"),o=i.createElement;t.default=function(){return o(u.a,{seo:{title:"Reddit"}},o("p",null,"//TODO"))}},fcPH:function(n,t,e){(window.__NEXT_P=window.__NEXT_P||[]).push(["/reddit",function(){var n=e("0GF3");return{page:n.default||n}}])}},[["fcPH",1,0]]]);

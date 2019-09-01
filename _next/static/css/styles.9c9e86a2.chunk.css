@@ -3,7 +3,6 @@ html,
 #__next {
   margin: 0;
   width: 100vw;
-  height: 100vh;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif;
   background-color: #f2f2f2; }
 
@@ -33,7 +32,7 @@ html,
   font-weight: bold;
   transition: box-shadow .2s ease;
   position: relative;
-  border: 1px solid #dbdbdb; }
+  border: 1px solid #d9d9d9; }
   .button:hover {
     background-color: white; }
   .button:active {
@@ -46,6 +45,13 @@ html,
     font-weight: 600;
     flex-grow: 1;
     cursor: pointer; }
+  .button.disabled {
+    border-style: dashed;
+    pointer-events: none; }
+    .button.disabled img {
+      filter: grayscale(100%); }
+    .button.disabled > * {
+      opacity: .75; }
 
 .buttons {
   display: flex;
@@ -56,7 +62,6 @@ html,
     margin-bottom: 12.5px; }
 
 .hero {
-  height: 225px;
   background-color: #0D1E24;
   color: #f2f2f2;
   margin-bottom: 25px;
@@ -64,20 +69,41 @@ html,
   margin-left: -25px;
   margin-right: -25px;
   display: grid;
-  grid-template-areas: "logo title" "logo description";
   grid-gap: 7px; }
   .hero img {
     width: 84px;
     height: 84px;
-    margin: auto 7px auto auto;
     grid-area: logo; }
   .hero .title {
     font-size: 2.5em;
     font-weight: 600;
-    margin: auto auto 0 0;
-    grid-area: title; }
+    grid-area: title;
+    text-align: center; }
   .hero .description {
     font-size: 1.25em;
-    margin: 0 auto auto 0;
-    grid-area: description; }
+    font-weight: normal;
+    grid-area: description;
+    text-align: center; }
+
+.hero {
+  height: 225px;
+  grid-template-areas: "logo title" "logo description"; }
+  .hero img {
+    margin: auto 7px auto auto; }
+  .hero .title {
+    margin: auto auto 0 0; }
+  .hero .description {
+    margin: 0 auto auto 0; }
+
+@media screen and (max-width: 430px) {
+  .hero {
+    height: 300px;
+    grid-template-areas: "logo" "title" "description";
+    grid-template-rows: 1.75fr 0fr 1fr; }
+    .hero img {
+      margin: auto auto 7px auto; }
+    .hero .title {
+      margin: 0 auto 0 auto; }
+    .hero .description {
+      margin: 0 auto auto auto; } }
 
