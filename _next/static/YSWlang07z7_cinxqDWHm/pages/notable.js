@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[10],{Lxb9:function(n,t,e){"use strict";e.r(t);var a=e("q1tI"),o=e("aiUF"),u=a.createElement;t.default=function(){return u(o.a,{seo:{title:"Notable"}},u("p",null,"//TODO"))}},wamn:function(n,t,e){(window.__NEXT_P=window.__NEXT_P||[]).push(["/notable",function(){var n=e("Lxb9");return{page:n.default||n}}])}},[["wamn",1,0]]]);

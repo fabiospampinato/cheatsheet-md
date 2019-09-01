@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[6],{U1Hu:function(n,t,u){"use strict";u.r(t);var e=u("q1tI"),i=u("aiUF"),o=e.createElement;t.default=function(){return o(i.a,{seo:{title:"Github"}},o("p",null,"//TODO"))}},s2hT:function(n,t,u){(window.__NEXT_P=window.__NEXT_P||[]).push(["/github",function(){var n=u("U1Hu");return{page:n.default||n}}])}},[["s2hT",1,0]]]);

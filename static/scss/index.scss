@@ -1,0 +1,130 @@
+
+$font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif;
+$gutter: 25px;
+$gutter-half: $gutter / 2;
+$background-color: #f2f2f2;
+
+body,
+html,
+#__next {
+  margin: 0;
+  width: 100vw;
+  height: 100vh;
+  font-family: $font-family;
+  background-color: $background-color;
+}
+
+.layout {
+  padding: $gutter;
+}
+
+.wave {
+
+  width: 100%;
+  height: auto;
+  transform: translateY(-50%);
+  margin-top: - $gutter;
+  margin-left: - $gutter;
+  margin-right: - $gutter;
+  position: absolute;
+
+  path {
+    fill: $background-color;
+  }
+
+}
+
+$button-background: #f9f9f9;
+$button-foreground: hsl(0, 0%, 12%);
+$button-border: #dbdbdb;
+
+.button {
+
+  display: flex;
+  align-items: center;
+  background-color: $button-background;
+  color: $button-foreground;
+  padding: $gutter-half;
+  border-radius: $gutter-half;
+  text-align: center;
+  text-decoration: none;
+  font-weight: bold;
+  transition: box-shadow .2s ease;
+  position: relative;
+  border: 1px solid $button-border;
+
+  &:hover {
+    background-color: lighten( $button-background, 3 );
+  }
+
+  &:active {
+    background-color: darken( $button-background, 3 );
+  }
+
+  img {
+    width: 36px;
+    height: 36px;
+  }
+
+  label {
+    font-size: 1.25em;
+    font-weight: 600;
+    flex-grow: 1;
+    cursor: pointer;
+  }
+
+}
+
+$buttons-max-width: 300px;
+
+.buttons {
+
+  display: flex;
+  flex-direction: column;
+  max-width: $buttons-max-width;
+  margin: 0 auto;
+
+  .button:not(:last-child) {
+    margin-bottom: $gutter-half;
+  }
+
+}
+
+$hero-height: 225px;
+$hero-background: #0D1E24;
+$hero-foreground: $background-color;
+
+.hero {
+
+  height: $hero-height;
+  background-color: $hero-background;
+  color: $hero-foreground;
+  margin-bottom: $gutter;
+  margin-top: - $gutter;
+  margin-left: - $gutter;
+  margin-right: - $gutter;
+  display: grid;
+  grid-template-areas: "logo title" "logo description";
+  grid-gap: 7px;
+
+  img {
+    width: 84px;
+    height: 84px;
+    margin: auto 7px auto auto;
+    grid-area: logo;
+  }
+
+  .title {
+    font-size: 2.5em;
+    font-weight: 600;
+    margin: auto auto 0 0;
+    grid-area: title;
+  }
+
+  .description {
+    font-size: 1.25em;
+    margin: 0 auto auto 0;
+    grid-area: description;
+  }
+
+}
