@@ -10,7 +10,7 @@ import Layout from '@layouts/layout';
 /* INDEX */
 
 const Index = () => (
-  <Layout seo={{ title: 'Cheatsheet.md', titleTemplate: '%s' }}>
+  <Layout seo={{ title: 'Cheatsheet.md | Markdown cheatsheets collection', titleTemplate: '%s' }}>
     <Hero />
     <Wave />
     <div className="buttons">
